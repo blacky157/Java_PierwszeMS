@@ -1,5 +1,7 @@
 package pl.gda.wsb;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -29,10 +31,30 @@ public class Main {
         }
         if(phone1.rok_produkcji>phone2.rok_produkcji)
         {
-            System.out.println(phone1.model +" jest młodszy od "+phone2.model+" jego rok produkcji to "+phone1.rok_produkcji);
+            //System.out.println(phone1.model +" jest młodszy od "+phone2.model+" jego rok produkcji to "+phone1.rok_produkcji);
+            StringBuilder phonedesc = new StringBuilder(phone1.model);
+            phonedesc.append(" jest młodszy od ");
+            phonedesc.append(phone2.model);
+            phonedesc.append(" jego rok produkcji to ");
+            phonedesc.append(phone2.rok_produkcji);
+            System.out.println(phonedesc);
         }
         else{
-            System.out.println(phone2.model +" jest młodszy od "+phone1.model+" jego rok produkcji to "+phone2.rok_produkcji);
+           // System.out.println(phone2.model +" jest młodszy od "+phone1.model+" jego rok produkcji to "+phone2.rok_produkcji);
+            StringBuilder phonedesc = new StringBuilder(phone2.model);
+            phonedesc.append(" jest młodszy od ");
+            phonedesc.append(phone1.model);
+            phonedesc.append(" jego rok produkcji to ");
+            phonedesc.append(phone1.rok_produkcji);
+            System.out.println(phonedesc);
+        }
+
+
+        ArrayList<Human> humanlist= new ArrayList<>();
+        humanlist.add(human1);
+        humanlist.add(human2);
+        for (Human human: humanlist){
+            System.out.println(human.first_name);
         }
 
 
