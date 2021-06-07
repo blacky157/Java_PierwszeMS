@@ -57,6 +57,30 @@ public class Main {
             System.out.println(human.first_name);
         }
 
+        animal2.feed();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.take_for_a_walk();
+        animal2.feed();
 
 
     }
