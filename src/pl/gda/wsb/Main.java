@@ -6,14 +6,20 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
+        Car car1 = new Car("Citroen","C5",2010);
+
         Human human1 = new Human("michal", "strupinski","automatyk",5000);
         Human human2 = new Human("krzysztof", "wilk","programista",10000);
+        human1.car= car1;
+
         System.out.println(human1.first_name +" "+human1.last_name);
+
         Animal animal1 = new Animal("lew", "kotowate","ssaki",10,60);
         Animal animal2 = new Animal("pies","psowate","ssaki",12,20);
         System.out.println(animal1.gatunek+" "+animal1.waga);
         Phone phone1 = new Phone("xiaomi","mi mix 3",2018);
         Phone phone2 = new Phone("samsung","galaxy s10",2016);
+
         System.out.println(phone1.model);
         if(animal1.waga>animal2.waga)
             {
@@ -57,30 +63,31 @@ public class Main {
             System.out.println(human.first_name);
         }
 
-        animal2.feed();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.take_for_a_walk();
-        animal2.feed();
+//        animal2.feed();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.take_for_a_walk();
+//        animal2.feed();
+        System.out.println("Auto " + human1.first_name+ "a " + human1.car.producer + " " + human1.car.model+" " +human1.car.rok_produkcji );
 
 
     }

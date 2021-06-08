@@ -6,6 +6,7 @@ public class Human {
     String position;
     double salary;
     Animal pet;
+    Car car;
 
     public Human(String first_name, String last_name, String position, double salary) {
         this.first_name = first_name;

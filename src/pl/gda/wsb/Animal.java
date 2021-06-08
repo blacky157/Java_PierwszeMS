@@ -33,6 +33,7 @@ public class Animal {
         else{
             weight ++;
             System.out.println(this.gatunek +" :pycha, dzięki !");
+            System.out.println("ważę teraz: " + this.weight );
         }
     }
     void take_for_a_walk(){
@@ -42,6 +43,7 @@ public class Animal {
         else{
             weight --;
             System.out.println(this.gatunek +" :było miło, dzięki");
+            System.out.println("ważę teraz: " + this.weight );
         }
     }
 }
