@@ -46,6 +46,18 @@ public class Animal {
             System.out.println("ważę teraz: " + this.weight );
         }
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "gatunek='" + gatunek + '\'' +
+                ", rodzina='" + rodzina + '\'' +
+                ", krolestwo='" + krolestwo + '\'' +
+                ", wiek=" + wiek +
+                ", weight=" + weight +
+                ", waga=" + waga +
+                '}';
+    }
 }
 
 

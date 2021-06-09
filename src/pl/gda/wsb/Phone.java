@@ -10,4 +10,13 @@ int rok_produkcji;
         this.model = model;
         this.rok_produkcji = rok_produkcji;
     }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "marka='" + marka + '\'' +
+                ", model='" + model + '\'' +
+                ", rok_produkcji=" + rok_produkcji +
+                '}';
+    }
 }

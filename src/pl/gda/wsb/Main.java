@@ -6,10 +6,12 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
-        Car car1 = new Car("Citroen","C5",2010);
+        Car car1 = new Car(Producer.Citroen,"C5",2010);
 
-        Human human1 = new Human("michal", "strupinski","automatyk",5000);
-        Human human2 = new Human("krzysztof", "wilk","programista",10000);
+        Human human1 = new Human("michal", "Strupinski","automatyk",5000);
+        Human human2 = new Human("krzysztof", "Wilk","programista",10000);
+        Human human3 = new Human("Piotr", "Nowicki","kasjer",2000);
+        Human human4 = new Human("Piotr", "Nowicki","kasjer",2000);
         human1.car= car1;
 
         System.out.println(human1.first_name +" "+human1.last_name);
@@ -88,6 +90,19 @@ public class Main {
 //        animal2.take_for_a_walk();
 //        animal2.feed();
         System.out.println("Auto " + human1.first_name+ "a " + human1.car.producer + " " + human1.car.model+" " +human1.car.rok_produkcji );
+
+       if (human3.equals(human4)) {
+           System.out.println("Wynik porównania == True");
+       }
+       else{
+           System.out.println("Wynik porównania == FALSE");
+       }
+       System.out.println(human1);
+       System.out.println(animal1);
+       System.out.println(phone1);
+       System.out.println(human3);
+       System.out.println(human4);
+
 
 
     }
