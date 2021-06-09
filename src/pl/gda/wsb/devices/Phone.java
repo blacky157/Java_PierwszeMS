@@ -1,4 +1,4 @@
-package pl.gda.wsb;
+package pl.gda.wsb.devices;
 
 public class Phone {
 String marka;
@@ -19,4 +19,17 @@ int rok_produkcji;
                 ", rok_produkcji=" + rok_produkcji +
                 '}';
     }
+
+    public String getMarka() {
+        return marka;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getRok_produkcji() {
+        return rok_produkcji;
+    }
+
 }

@@ -1,5 +1,8 @@
 package pl.gda.wsb;
 
+import pl.gda.wsb.devices.Car;
+import pl.gda.wsb.devices.Phone;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -22,7 +25,7 @@ public class Main {
         Phone phone1 = new Phone("xiaomi","mi mix 3",2018);
         Phone phone2 = new Phone("samsung","galaxy s10",2016);
 
-        System.out.println(phone1.model);
+        System.out.println(phone1.getModel());
         if(animal1.waga>animal2.waga)
             {
                 System.out.println(animal1.gatunek+" jest cięższy i waży "+animal1.waga);
@@ -37,23 +40,23 @@ public class Main {
         else {
             System.out.println(human2.first_name+" zarabia wiecej - "+human2.salary);
         }
-        if(phone1.rok_produkcji>phone2.rok_produkcji)
+        if(phone1.getRok_produkcji()>phone2.getRok_produkcji()  )
         {
             //System.out.println(phone1.model +" jest młodszy od "+phone2.model+" jego rok produkcji to "+phone1.rok_produkcji);
-            StringBuilder phonedesc = new StringBuilder(phone1.model);
+            StringBuilder phonedesc = new StringBuilder(phone1.getModel());
             phonedesc.append(" jest młodszy od ");
-            phonedesc.append(phone2.model);
+            phonedesc.append(phone2.getModel());
             phonedesc.append(" jego rok produkcji to ");
-            phonedesc.append(phone2.rok_produkcji);
+            phonedesc.append(phone2.getRok_produkcji());
             System.out.println(phonedesc);
         }
         else{
            // System.out.println(phone2.model +" jest młodszy od "+phone1.model+" jego rok produkcji to "+phone2.rok_produkcji);
-            StringBuilder phonedesc = new StringBuilder(phone2.model);
+            StringBuilder phonedesc = new StringBuilder(phone2.getModel());
             phonedesc.append(" jest młodszy od ");
-            phonedesc.append(phone1.model);
+            phonedesc.append(phone1.getModel());
             phonedesc.append(" jego rok produkcji to ");
-            phonedesc.append(phone1.rok_produkcji);
+            phonedesc.append(phone1.getRok_produkcji());
             System.out.println(phonedesc);
         }
 
@@ -89,7 +92,7 @@ public class Main {
 //        animal2.take_for_a_walk();
 //        animal2.take_for_a_walk();
 //        animal2.feed();
-        System.out.println("Auto " + human1.first_name+ "a " + human1.car.producer + " " + human1.car.model+" " +human1.car.rok_produkcji );
+        System.out.println("Auto " + human1.first_name+ "a " + human1.car.getProducer() + " " + human1.car.getModel()+" " +human1.car.getRok_produkcji() );
 
        if (human3.equals(human4)) {
            System.out.println("Wynik porównania == True");

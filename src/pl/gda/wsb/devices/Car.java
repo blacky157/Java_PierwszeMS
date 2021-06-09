@@ -1,6 +1,8 @@
-package pl.gda.wsb;
+package pl.gda.wsb.devices;
 
-    public class Car {
+import pl.gda.wsb.Producer;
+
+public class Car {
         Producer producer;
         String model;
         int rok_produkcji;
@@ -20,5 +22,17 @@ package pl.gda.wsb;
                     ", rok_produkcji=" + rok_produkcji +
                     '}';
         }
+
+    public Producer getProducer() {
+        return producer;
     }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getRok_produkcji() {
+        return rok_produkcji;
+    }
+}
 
