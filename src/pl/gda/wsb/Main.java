@@ -33,13 +33,13 @@ public class Main {
         else {
                 System.out.println(animal2.gatunek + " jest cięższy i waży " + animal2.waga);
              }
-        if(human1.salary> human2.salary)
-        {
-            System.out.println(human1.first_name+" zarabia wiecej - "+human1.salary);
-        }
-        else {
-            System.out.println(human2.first_name+" zarabia wiecej - "+human2.salary);
-        }
+//        if(human1.getSalary()> human2.getSalary())
+//        {
+//            System.out.println(human1.first_name+" zarabia wiecej - "+human1.getSalary());
+//        }
+//        else {
+//            System.out.println(human2.first_name+" zarabia wiecej - "+human2.getSalary());
+//        }
         if(phone1.getRok_produkcji()>phone2.getRok_produkcji()  )
         {
             //System.out.println(phone1.model +" jest młodszy od "+phone2.model+" jego rok produkcji to "+phone1.rok_produkcji);
@@ -106,6 +106,11 @@ public class Main {
        System.out.println(human3);
        System.out.println(human4);
 
+        System.out.println(human1.first_name+" "+human1.last_name+" zarabia: "+human1.getSalary());
+        System.out.println(human2.first_name+" "+human2.last_name+" zarabia: "+human2.getSalary());
+
+       human1.setSalary(6000);
+       human2.setSalary(-200);
 
 
     }

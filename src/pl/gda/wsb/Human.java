@@ -1,14 +1,17 @@
 package pl.gda.wsb;
 
 import pl.gda.wsb.devices.Car;
+import java.text.SimpleDateFormat;
 
+
+import java.util.Date;
 import java.util.Objects;
 
 public class Human {
     String first_name;
     String last_name;
     String position;
-    double salary;
+    private double salary;
     Animal pet;
     Car car;
 
@@ -17,6 +20,26 @@ public class Human {
         this.last_name = last_name;
         this.position = position;
         this.salary = salary;
+    }
+
+    public double getSalary() {
+
+        System.out.println("dane pobrano: " +new Date());
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        if (salary < 0) System.out.println("Chyba lekko przesadzasz, co ?");
+        else {
+            System.out.println(first_name+" "+last_name+ " będzie teraz zarabiał: "+salary);
+            this.salary = salary;
+            System.out.println("przekazano dane do księgowości");
+            System.out.println("Pani Hania czeka na odebranie aneksu");
+            System.out.println("Nowy dochód został zgłoszony do ZUS i US");
+        }
+
+
+
     }
 
     @Override
