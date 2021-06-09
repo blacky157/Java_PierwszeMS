@@ -9,13 +9,17 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
-        Car car1 = new Car(Producer.Citroen,"C5",2010);
+        Car car1 = new Car(Producer.Citroen,"C5",2010, 27000);
+        Car car2 = new Car(Producer.Seat,"Toledo",2000, 3000);
+        Car car3 = new Car(Producer.Skoda,"Superb",2021, 300000);
+
 
         Human human1 = new Human("michal", "Strupinski","automatyk",5000);
         Human human2 = new Human("krzysztof", "Wilk","programista",10000);
         Human human3 = new Human("Piotr", "Nowicki","kasjer",2000);
         Human human4 = new Human("Piotr", "Nowicki","kasjer",2000);
-        human1.car= car1;
+        human1.setCar(car1);
+
 
         System.out.println(human1.first_name +" "+human1.last_name);
 
@@ -92,7 +96,7 @@ public class Main {
 //        animal2.take_for_a_walk();
 //        animal2.take_for_a_walk();
 //        animal2.feed();
-        System.out.println("Auto " + human1.first_name+ "a " + human1.car.getProducer() + " " + human1.car.getModel()+" " +human1.car.getRok_produkcji() );
+        System.out.println("Auto " + human1.first_name+ "a " + human1.getCar().getProducer() + " " + human1.getCar().getModel()+" " +human1.getCar().getRok_produkcji() );
 
        if (human3.equals(human4)) {
            System.out.println("Wynik porównania == True");
@@ -111,7 +115,15 @@ public class Main {
 
        human1.setSalary(6000);
        human2.setSalary(-200);
+       System.out.println(human2.getFirst_name()+" "+ human2.getLast_name() +" twoje auto to: " +human2.getCar());
+       human2.setCar(car3);
+       System.out.println(human2.getFirst_name()+" "+ human2.getLast_name() +" twoje auto to: " +human2.getCar());
 
+       System.out.println(human2.getFirst_name()+" "+ human3.getLast_name() +" twoje auto to: " +human3.getCar());
+       human3.setCar(car2);
+       human3.setSalary(3100);
+       human3.setCar(car2);
+       System.out.println(human2.getFirst_name()+" "+ human3.getLast_name() +" twoje auto to: " +human3.getCar());
 
     }
 

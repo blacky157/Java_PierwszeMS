@@ -13,7 +13,7 @@ public class Human {
     String position;
     private double salary;
     Animal pet;
-    Car car;
+    private Car car;
 
     public Human(String first_name, String last_name, String position, double salary) {
         this.first_name = first_name;
@@ -28,6 +28,39 @@ public class Human {
         return salary;
     }
 
+    public String getFirst_name() {
+        return first_name;
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public Animal getPet() {
+        return pet;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+       if(salary >car.getWartosc()) {
+           System.out.println("Kupujesz auto za gotówkę");
+           this.car = car;
+       }
+       else if (salary * 12 > car.getWartosc()){
+           System.out.println("Kupiłeś, ale na kredyt. Bywa");
+           this.car = car;
+       }
+       else System.out.println("nie masz siana, leć po podwyżkę");
+
+    }
+
     public void setSalary(double salary) {
         if (salary < 0) System.out.println("Chyba lekko przesadzasz, co ?");
         else {
@@ -37,6 +70,8 @@ public class Human {
             System.out.println("Pani Hania czeka na odebranie aneksu");
             System.out.println("Nowy dochód został zgłoszony do ZUS i US");
         }
+
+
 
 
 

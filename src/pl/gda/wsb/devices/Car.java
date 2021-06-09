@@ -6,21 +6,14 @@ public class Car {
         Producer producer;
         String model;
         int rok_produkcji;
+        int wartosc;
 
-        public Car(Producer producer, String model, int rok_produkcji) {
+        public Car(Producer producer, String model, int rok_produkcji, int wartosc) {
             this.producer = producer;
             this.model = model;
             this.rok_produkcji = rok_produkcji;
+            this.wartosc = wartosc;
 
-        }
-
-        @Override
-        public String toString() {
-            return "Car{" +
-                    "producer=" + producer +
-                    ", model='" + model + '\'' +
-                    ", rok_produkcji=" + rok_produkcji +
-                    '}';
         }
 
     public Producer getProducer() {
@@ -34,5 +27,21 @@ public class Car {
     public int getRok_produkcji() {
         return rok_produkcji;
     }
+
+    public int getWartosc() {
+        return wartosc;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "producer=" + producer +
+                ", model='" + model + '\'' +
+                ", rok_produkcji=" + rok_produkcji +
+                ", wartosc=" + wartosc +
+                '}';
+    }
+
+
 }
 
