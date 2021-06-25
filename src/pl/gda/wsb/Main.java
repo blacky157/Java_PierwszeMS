@@ -26,8 +26,8 @@ public class Main {
         Animal animal1 = new Animal("lew", "kotowate","ssaki",10,60);
         Animal animal2 = new Animal("pies","psowate","ssaki",12,20);
         System.out.println(animal1.gatunek+" "+animal1.waga);
-        Phone phone1 = new Phone("xiaomi","mi mix 3",2018);
-        Phone phone2 = new Phone("samsung","galaxy s10",2016);
+        Phone phone1 = new Phone("xiaomi","mi mix", 2018, Producer.Kia);
+        Phone phone2 = new Phone("samsung","galaxy s10",2016,Producer.Kia);
 
         System.out.println(phone1.getModel());
         if(animal1.waga>animal2.waga)
@@ -124,7 +124,8 @@ public class Main {
        human3.setSalary(3100);
        human3.setCar(car2);
        System.out.println(human2.getFirst_name()+" "+ human3.getLast_name() +" twoje auto to: " +human3.getCar());
-
+       car1.turnOn();
+       phone1.turnOn();
     }
 
 

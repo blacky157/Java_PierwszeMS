@@ -2,16 +2,13 @@ package pl.gda.wsb.devices;
 
 import pl.gda.wsb.Producer;
 
-public class Car {
-        Producer producer;
-        String model;
-        int rok_produkcji;
+public class Car extends Device {
+
         int wartosc;
 
         public Car(Producer producer, String model, int rok_produkcji, int wartosc) {
-            this.producer = producer;
-            this.model = model;
-            this.rok_produkcji = rok_produkcji;
+            super(producer,model,rok_produkcji);
+
             this.wartosc = wartosc;
 
         }
@@ -33,7 +30,12 @@ public class Car {
     }
 
     @Override
-    public String toString() {
+    public void turnOn() {
+        System.out.println("Car działa");
+    }
+
+    @Override
+    public String  toString() {
         return "Car{" +
                 "producer=" + producer +
                 ", model='" + model + '\'' +

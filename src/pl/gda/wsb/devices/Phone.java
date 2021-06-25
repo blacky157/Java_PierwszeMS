@@ -1,14 +1,19 @@
 package pl.gda.wsb.devices;
 
-public class Phone {
-String marka;
-String model;
-int rok_produkcji;
+import pl.gda.wsb.Producer;
 
-    public Phone(String marka, String model, int rok_produkcji) {
+public class Phone extends Device {
+String marka;
+
+public Phone(String marka, String model, Integer rok_produkcji, Producer producer)  {
+        super(producer, model, rok_produkcji);
         this.marka = marka;
-        this.model = model;
-        this.rok_produkcji = rok_produkcji;
+
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("phone działa");
     }
 
     @Override
