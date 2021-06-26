@@ -14,12 +14,35 @@ public class Human {
     private double salary;
     Animal pet;
     private Car car;
+    Double cash;
 
-    public Human(String first_name, String last_name, String position, double salary) {
+    public Human(String first_name, String last_name, String position, Double salary, Double cash) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.position = position;
         this.salary = salary;
+        this.cash = cash;
+    }
+    public boolean hasCar (Car newCar) {
+        if (this.car == newCar) {
+            return true;
+        }
+        else return false;
+    }
+    public void removeCar(){
+        this.car = null;
+    }
+
+
+
+    public Double getCash() {
+        return cash;
+    }
+
+
+
+    public void setCash(Double cash) {
+        this.cash = cash;
     }
 
     public double getSalary() {

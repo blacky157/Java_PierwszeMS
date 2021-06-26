@@ -1,5 +1,6 @@
 package pl.gda.wsb.devices;
 
+import pl.gda.wsb.Human;
 import pl.gda.wsb.Producer;
 
 public class Car extends Device {
@@ -45,5 +46,21 @@ public class Car extends Device {
     }
 
 
+    @Override
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if(!seller.hasCar(this)){
+            throw new Exception("Klient nie ma tego auta");
+        }
+        if(buyer.getCash() < price) {
+            throw new Exception("Brak siana");
+        }
+        buyer.setCar(this);
+        seller.removeCar();
+        seller.setCash(seller.getCash() + price);
+        buyer.setCash(buyer.getCash() - price );
+        System.out.println("sprzedano");
+        System.out.println("Sprzedano auto "+this.producer+" "+ this.model+" zakupił:"+buyer.getLast_name()+" od " +seller.getLast_name()+ " za " +price);
+
+    }
 }
 

@@ -14,10 +14,10 @@ public class Main {
         Car car3 = new Car(Producer.Skoda,"Superb",2021, 300000);
 
 
-        Human human1 = new Human("michal", "Strupinski","automatyk",5000);
-        Human human2 = new Human("krzysztof", "Wilk","programista",10000);
-        Human human3 = new Human("Piotr", "Nowicki","kasjer",2000);
-        Human human4 = new Human("Piotr", "Nowicki","kasjer",2000);
+        Human human1 = new Human("michal", "Strupinski","automatyk",5000.0,5000.0);
+        Human human2 = new Human("krzysztof", "Wilk","programista",10000.0,10000.0);
+        Human human3 = new Human("Piotr", "Nowicki","kasjer",2000.0,2000.0);
+        Human human4 = new Human("Piotr", "Nowicki","kasjer",2000.0,2000.0);
         human1.setCar(car1);
 
 
@@ -126,6 +126,13 @@ public class Main {
        System.out.println(human2.getFirst_name()+" "+ human3.getLast_name() +" twoje auto to: " +human3.getCar());
        car1.turnOn();
        phone1.turnOn();
+        try {
+            car1.sell(human1,human2,220.0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        phone1.sell(human1,human2,500.0);
+
     }
 
 

@@ -1,5 +1,6 @@
 package pl.gda.wsb.devices;
 
+import pl.gda.wsb.Human;
 import pl.gda.wsb.Producer;
 
 public class Phone extends Device {
@@ -37,4 +38,9 @@ public Phone(String marka, String model, Integer rok_produkcji, Producer produce
         return rok_produkcji;
     }
 
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        System.out.println("jestem tu");
+
+    }
 }
